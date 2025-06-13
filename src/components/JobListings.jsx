@@ -25,16 +25,18 @@ const JobListings = ({ isHome = false }) => {
   }, []);
 
   return (
-    <section className="bg-blue-50 px-4 py-10">
+    <section className="bg-gradient-to-br from-purple-50 to-blue-50 px-4 py-16">
       <div className="container-xl lg:container m-auto">
-        <h2 className="text-3xl font-bold text-indigo-500 mb-6 text-center">
+        <h2 className="text-4xl font-bold text-gray-800 mb-10 text-center">
           {isHome ? "Recent Jobs" : "Browse Jobs"}
         </h2>
 
         {loading ? (
-          <Spinner loading={loading} />
+          <div className="text-center py-12">
+            <div className="text-purple-600 text-lg">Loading jobs...</div>
+          </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {jobs.map((job) => (
               <JobListing key={job.id} job={job} />
             ))}
