@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="public/jplogo.png" width="120" alt="Job Portal Logo">
+  <img src="public/jplogo.png" width="250" alt="Job Portal Logo">
 </p>
 
 <h1 align="center">💼 Job Portal</h1>
